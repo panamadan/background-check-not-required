@@ -5,10 +5,13 @@ import Input from 'muicss/lib/react/input';
 import Textarea from 'muicss/lib/react/textarea';
 import Button from 'muicss/lib/react/button';
 import Checkbox from 'muicss/lib/react/checkbox';
+import Container from 'muicss/lib/react/container';
 
 class CompanyInfo extends React.Component {
   render() {
     return (
+        <Container>
+            
       <Form>
         <legend>Company Info</legend>
         <Input placeholder="Name " />
@@ -18,6 +21,8 @@ class CompanyInfo extends React.Component {
         <Checkbox name="inputA1" label="Felon" />
         <Checkbox name="inputA2" label="Misdemeanor" />
       </Form>
+  
+      </Container>
     );
   }
 }
