@@ -12,21 +12,18 @@ class CompanyInfo extends React.Component {
   render() {
     return (
       <div>
-      <Navbar />
-        
-      <Container>
-            
-      <Form>
-        <legend>Company Info</legend>
-        <Input placeholder="Name " />
-        <Input placeholder="Job " />
-        <Textarea placeholder="Description" />
-        <Button variant="raised">Submit</Button>
-        <Checkbox name="inputA1" label="Felon" />
-        <Checkbox name="inputA2" label="Misdemeanor" />
-      </Form>
-  
-      </Container>
+        <Navbar />
+        <Container>  
+          <Form>
+            <legend>Company Info</legend>
+            <Input placeholder="Name " />
+            <Input placeholder="Job " />
+            <Textarea placeholder="Description" />
+            <Button variant="raised">Submit</Button>
+            <Checkbox name="inputA1" label="Felon" />
+            <Checkbox name="inputA2" label="Misdemeanor" />
+          </Form>
+        </Container>
       </div>
     );
   }
