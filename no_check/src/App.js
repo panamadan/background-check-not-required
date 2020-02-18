@@ -1,13 +1,25 @@
 import React from 'react';
-// import logo from './logo.svg';
+
 import './App.css';
-import Companyinfo from './pages/Companyinfo';
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import Home from "./pages/Home/Home";
+import Signup from "./pages/Signup/Signup"
+import Signin from './pages/Signin/Signin';
 
 function App() {
   return (
-    <div className="App">
-     <Companyinfo/>
-    </div>
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/create" component={Home} />
+          <Route exact path="/signin" component={Signin} />
+          <Route exact path="/signup" component={Signup} />
+        </Switch>
+      </div>
+    </Router>
+    
+
   );
 }
 

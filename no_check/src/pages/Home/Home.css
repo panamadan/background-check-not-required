@@ -1,0 +1,27 @@
+.mui-appbar{
+    background-color: rgb(255, 196, 0);
+    height: 72px;
+}
+
+.mui-container{
+    background-color: #e0e0e0;
+    height: 33vh;
+    width: 60vw;
+    margin-top: 8em;
+}
+
+.mui-btn{
+    height: 12vh;
+    width: 12em;
+    font-size: 24px;
+}
+
+.applyBtn{
+    margin-top: 8vh;
+    margin-left: 8vw;
+}
+
+.createBtn{
+    margin-top: 8vh;
+    margin-right: 8vw;
+}
