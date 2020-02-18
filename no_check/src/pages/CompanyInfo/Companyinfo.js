@@ -6,11 +6,15 @@ import Textarea from 'muicss/lib/react/textarea';
 import Button from 'muicss/lib/react/button';
 import Checkbox from 'muicss/lib/react/checkbox';
 import Container from 'muicss/lib/react/container';
+import Navbar from '../../components/Navbar/Navbar';
 
 class CompanyInfo extends React.Component {
   render() {
     return (
-        <Container>
+      <div>
+      <Navbar />
+        
+      <Container>
             
       <Form>
         <legend>Company Info</legend>
@@ -23,6 +27,7 @@ class CompanyInfo extends React.Component {
       </Form>
   
       </Container>
+      </div>
     );
   }
 }
