@@ -21,6 +21,11 @@ module.exports = function(sequelize, DataTypes)
         {
             type: DataTypes.STRING,
             allowNull: false
+        },
+        crimeType:
+        {
+            type: DataTypes.STRING,
+            allowNull: false
         }
     });
     return Job_Posts;
