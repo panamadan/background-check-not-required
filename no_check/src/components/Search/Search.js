@@ -12,7 +12,7 @@ function Search()
         <div>
              <Form>
                 <Input className="searchVal" placeholder="Search for Jobs" />
-                <Button className="searchBtn" variant="raised">Search</Button>
+                <Button className="searchBtn" variant="raised"><a href="/jobs">Search</a></Button>
              </Form>
         </div>
     );
