@@ -4,6 +4,10 @@ import "./Navbar.css"
 
 function Navbar ()
 {
+    // const [page, setPage] = useState();
+
+    // didComponentMount()
+
     let s1 = {verticalAlign: "middle", textAlign: "left", fontSize: 36};
     let s2 = {verticalAlign: "middle", textAlign: "right", fontSize: 30}
     return(
