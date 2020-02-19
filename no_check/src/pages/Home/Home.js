@@ -15,8 +15,12 @@ function Home ()
             <Navbar />
             <Container>
                 <Row>
-                    <Search/>
-                    <Button className="createBtn" color="primary" variant="raised"><a href="/create">Create Job!</a></Button>
+                    <Col md="8">
+                        <Search/>
+                    </Col>
+                    <Col md="4">
+                        <Button className="createBtn" color="primary" variant="raised"><a href="/create">Create Job!</a></Button>
+                    </Col>
                 </Row>
                 <Row>
                     
