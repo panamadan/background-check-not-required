@@ -25,7 +25,7 @@ const connection = mongoose.connection;
 connection.once("open", () => {console.log("MongoDB connection established successfully")});
 
 // Routes
-const createJobRouter = require("./src/routes/createJobs");
+const createJobRouter = require("../routes/createJobs");
 
 app.use("/create", createJobRouter);
 
