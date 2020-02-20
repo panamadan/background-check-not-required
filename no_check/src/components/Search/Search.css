@@ -1,0 +1,15 @@
+.searchBtn{
+    margin-top:7em;
+    margin-left: 1em;
+    width: 12em;
+    height: 4em;
+    float: left;
+}
+
+.searchVal{
+    width: 28em;
+    height: 8em;
+    margin-top: 7em;
+    margin-left: 2em;
+    float: left;
+}

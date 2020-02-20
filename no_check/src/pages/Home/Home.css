@@ -5,23 +5,15 @@
 
 .mui-container{
     background-color: #e0e0e0;
-    height: 33vh;
-    width: 60vw;
+    height: 20em;
+    width: 80em;
     margin-top: 8em;
 }
 
-.mui-btn{
-    height: 12vh;
-    width: 12em;
-    font-size: 24px;
-}
-
-.applyBtn{
-    margin-top: 8vh;
-    margin-left: 8vw;
-}
 
 .createBtn{
-    margin-top: 8vh;
-    margin-right: 8vw;
+    margin-top: 7em;
+    margin-left: 2em;
+    width: 12em;
+    height: 4em;
 }
