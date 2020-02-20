@@ -1,32 +1,36 @@
-module.exports = function(sequelize, DataTypes)
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
+const createJobSchema = new Schema(
 {
-    var Job_Posts = sequelize.define("Job_Posts", 
+    jobTitle:
     {
-        jobTitle:
-        {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        company:
-        {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        salary:
-        {
-            type: DataTypes.INTEGER,
-            allowNull: false
-        },
-        summary:
-        {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        crimeType:
-        {
-            type: DataTypes.STRING,
-            allowNull: false
-        }
-    });
-    return Job_Posts;
-};
+        type: String,
+        trim: true,
+        required: "String Required"
+    },
+    company:
+    {
+        type: String,
+        trim: true,
+        required: "String Required"
+    },
+    salary:
+    {
+        type: Number,
+        required: true
+    },
+    summary:
+    {
+        type: String,
+        required: "String Required"
+    },
+    crimeType:
+    {
+        type: String,
+        required: "String Required"
+    }
+});
+
+const Job = mongoose.model("Job", createJobSchema);
+
+module.exports = Job
