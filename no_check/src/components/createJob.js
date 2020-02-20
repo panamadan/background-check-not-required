@@ -8,17 +8,13 @@ function createJob ()
     const [summary, setSummary] = useState();
     const [crimeType, setCrimeType] = useState();
 
-    onsubmit(e)
+    const handleSubmit = e => 
     {
-        this.setJobTitle(
-        {
-           jobTitle: 
-        });
-
-        this.setCompany(
-        {
-            company: e.target.value
-        })
+        console.log("Job Title: " + this.refs.jobTitle)
+        console.log("Company: " + this.refs.company)
+        console.log("Salary: " + this.refs.salary)
+        console.log("Summary: " + this.refs.summary)
+        console.log("Crime Type: " + this.refs.jobTitle)
     }
 
 }
