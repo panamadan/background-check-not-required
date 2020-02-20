@@ -10,32 +10,32 @@ mongoose.connect(
 
 const jobSeed = [
   {
-    jobTitle: "",
-    company: "",
-    salary: "",
-    summary:"",
-    crimeType: ""
+    jobTitle: "Finance Planner",
+    company: "JDD Finance",
+    salary: "$20 per hour",
+    summary:"Looking for someone with a finance backgorund for new clients",
+    crimeType: "Felony"
   },
   {
-    jobTitle: "",
-    company: "",
-    salary: "",
-    summary:"",
-    crimeType: ""
+    jobTitle: "Marketing",
+    company: "Big Mountain Marketing",
+    salary: "$50,000 - $75,000",
+    summary:"Looking for someone with ideas and how to implementing them.",
+    crimeType: "Felony"
   },
   {
-    jobTitle: "",
-    company: "",
-    salary: "",
-    summary:"",
-    crimeType: ""
+    jobTitle: "Construction",
+    company: "BBG Construction",
+    salary: "$15 per hour",
+    summary:"Looking for a hard worker to do construction work where needed.",
+    crimeType: "Felony"
   },
   {
-    jobTitle: "",
-    company: "",
-    salary: "",
-    summary:"",
-    crimeType: ""
+    jobTitle: "Assistant",
+    company: "John R Accounting",
+    salary: "$15-$20 per hour",
+    summary:"Looking for an assistant to help with spreadsheets in accounting.",
+    crimeType: "Misdemeanor"
   },
 ]
   
