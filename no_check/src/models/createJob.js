@@ -31,6 +31,6 @@ const createJobSchema = new Schema(
     }
 });
 
-const createJob = mongoose.model("createJob", createJobSchema);
+const Job = mongoose.model("Job", createJobSchema);
 
-module.exports = createJob
+module.exports = Job

@@ -1,10 +1,9 @@
 // Dependencies
 const express = require("express");
 const mongoose = require("mongoose");
-const routes = require("./routes");
 
 // Require .env for mongoose
-require("dotenv").config;
+require("dotenv").config({path: "./.env"});
 
 // Initialize express app
 const app = express();
@@ -20,14 +19,15 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Create connection to MongoDB
-const uri = process.env.ATLAS_URI
-mongoose.connect(uri, {useNewUrlParser: true, useCreateIndex: true});
+mongoose.connect(process.env.ATLAS_URI, {useNewUrlParser: true, useCreateIndex: true});
 
 const connection = mongoose.connection;
 connection.once("open", () => {console.log("MongoDB connection established successfully")});
 
-// Add routes, both API and view
-app.use(routes);
+// Routes
+const createJobRouter = require("./src/routes/createJobs");
+
+app.use("/create", createJobRouter);
 
 // Start the API server
 app.listen(PORT, function() {
