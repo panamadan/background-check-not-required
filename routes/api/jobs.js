@@ -1,5 +1,5 @@
 const router = require("express").Router();
-let Job = require("../models/createJob");
+let Job = require("../../models/job");
 
 router.route("/").post((req,res) =>
 {
