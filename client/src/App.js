@@ -14,6 +14,7 @@ import {Container} from "./components/Grid";
 import PublicRoute from "./pages/PublicRoute";
 import ProtectedRoute from "./pages/PublicRoute";
 import './App.css';
+
 import Home from "./pages/Home/Home"
 import NavBar from "./components/NavBar/Navbar"
 import CompanyInfo from './pages/CompanyInfo/Companyinfo';
