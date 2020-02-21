@@ -7,6 +7,7 @@ import Container from "muicss/lib/react/container";
 import Navbar from "../../components/NavBar/Navbar";
 import Row from "muicss/lib/react/row";
 import { json } from "body-parser";
+import API from "../../utils/Jobs"
 
 function CompanyInfo() 
 {
@@ -22,14 +23,9 @@ function CompanyInfo()
     e.preventDefault();
 
     const data = {jobTitle: jobTitle, company: company, salary: salary, summary: summary, crimeType: crimeType}
-
-    fetch("/create",
-    {
-      method: "POST",
-      body: JSON.stringify(data),
-
-    })
-    .then(res => res.json())
+    console.log("Data in handleSubmit: " + data);
+    API.createJob(data)
+    .then(res => console.log(res))
     .catch(error => console.error("Error: ", error))
     .then(res => console.log("Success", res))
 

@@ -1,8 +1,8 @@
 import axios from "axios";
 
 export default {
-    createJob: function()
+    createJob: function(data)
     {
-        return axios.get("/create")
+        return axios.post("/create", data)
     }
 }
