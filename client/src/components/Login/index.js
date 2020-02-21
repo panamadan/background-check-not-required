@@ -2,6 +2,14 @@ import React from 'react';
 import { Redirect } from 'react-router-dom';
 import LoginForm from "../LoginForm";
 import Auth from "../../utils/Auth";
+import "../../pages/SignIn/Signin.css";
+import Navbar from "../NavBar/Navbar";
+// import ReactDOM from 'react-dom';
+import Form from 'muicss/lib/react/form';
+import Input from 'muicss/lib/react/input';
+// import Textarea from 'muicss/lib/react/textarea';
+import Button from 'muicss/lib/react/button';
+import { Container } from "muicss/react";
 //Uses the Auth methods to actually login with the LoginForm Component.
 class Login extends React.Component {
     //Initial boolean to check for authenticated user
@@ -44,9 +52,19 @@ class Login extends React.Component {
 		
 		return (
 			<div>
-				<p>You must log in to view the page at {from.pathname}</p>
-				<LoginForm onLogin={this.login} />
-			</div>
+            {/* <Navbar /> */}
+            <Container>
+            <Form>
+        <legend>Sign In</legend>
+        {/* <Input label="Name " required={true} /> */}
+        <Input label="Email Address" type="email" floatingLabel={true} required={true} />
+        <Input label="Password" type="password" floatingLabel={true} required={true} />
+        {/* <Textarea label="Required Textarea" floatingLabel={true} required={true} /> */}
+        {/* <Input label="Email Address" type="email" defaultValue="Validation error" /> */}
+        <Button variant="raised">Sign in</Button>
+      </Form>
+      </Container>
+        </div>
 		)
 	}
 }

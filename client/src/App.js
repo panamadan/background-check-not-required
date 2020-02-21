@@ -15,6 +15,8 @@ import {Container} from "./components/Grid";
 import PublicRoute from "./pages/PublicRoute";
 import ProtectedRoute from "./pages/PublicRoute";
 import './App.css';
+import Home from "./pages/Home/Home"
+import NavBar from "./components/NavBar/Navbar"
 
 //I want to add some basic inline styling here, even though we are bringing in styles
 const listStyle = {
@@ -25,19 +27,20 @@ const listStyle = {
 const AuthExample = () => (
 	<Router>
 		<div>
-      		<Nav className="App-header"/>
+      		{/* <Nav className="App-header"/> */}
+			  <NavBar/>
 			<Container>
-				<AuthButton/>
-				<ul style={listStyle}>
+				{/* <AuthButton/> */}
+				{/* <ul style={listStyle}>
 					<li><Link to="/public">Public Page</Link></li>
 					<li><Link to="/protected">Protected Page</Link></li>
 					<li><Link to="/register">Register a New User</Link></li>
-				</ul>
+				</ul> */}
 				<Switch>
-					<Route path="/public" component={PublicRoute}/>
-					<Route path="/login" component={Login}/>
-					<Route path="/register" component={Register}/>
-					<PrivateRoute path="/protected" component={ProtectedRoute}/>
+					<Route exact path="/" component={Home}/>
+					<Route exact path="/login" component={Login}/>
+					<Route exact path="/register" component={Register}/>
+					<PrivateRoute exact path="/protected" component={ProtectedRoute}/>
 					{/* <Route component={NoMatch} /> */}
 				</Switch>
 			</Container>
