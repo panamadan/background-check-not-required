@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css";
-import Navbar from "../../components/Navbar/Navbar";
+import Navbar from "../../components/NavBar/Navbar";
 import Search from "../../components/Search/Search";
 import Container from "muicss/lib/react/container";
 import Row from "muicss/lib/react/row";
@@ -12,7 +12,7 @@ function Home ()
 {
     return(
         <div>
-            <Navbar />
+            {/* <Navbar /> */}
             <Container>
                 <Row>
                     <Col md="8">
