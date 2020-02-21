@@ -8,7 +8,6 @@ import {
 	withRouter
 } from 'react-router-dom';
 import Auth from "./utils/Auth";
-import Nav from "./components/Nav";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import {Container} from "./components/Grid";
@@ -17,6 +16,7 @@ import ProtectedRoute from "./pages/PublicRoute";
 import './App.css';
 import Home from "./pages/Home/Home"
 import NavBar from "./components/NavBar/Navbar"
+import CompanyInfo from './pages/CompanyInfo/Companyinfo';
 
 //I want to add some basic inline styling here, even though we are bringing in styles
 const listStyle = {
@@ -37,6 +37,7 @@ const AuthExample = () => (
 					<li><Link to="/register">Register a New User</Link></li>
 				</ul> */}
 				<Switch>
+					<Route exact path="/create" component={CompanyInfo} />
 					<Route exact path="/" component={Home}/>
 					<Route exact path="/login" component={Login}/>
 					<Route exact path="/register" component={Register}/>
