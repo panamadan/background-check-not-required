@@ -1,8 +1,9 @@
 const router = require("express").Router();
-let Job = require("../models/createJob");
+let Job = require("../../models/job");
 
 router.route("/").post((req,res) =>
 {
+    console.log("Request body in route: " + JSON.stringify(req.body))
     const jobTitle = req.body.jobTitle;
     const company = req.body.company;
     const salary = req.body.salary;

@@ -9,6 +9,7 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const flash = require('connect-flash');
 const routes = require('./routes/index');
+require('dotenv').config({ path: "./.env" });
 /* === Set the PORT to work with deployment environment === */
 const PORT = process.env.PORT || 3001;
 /* === Call Express as app === */
@@ -38,8 +39,11 @@ if (process.env.NODE_ENV === "production") {
 };
 
 /* === Routing === */
+const jobRouter = require("./routes/api/jobs")
 
-app.use(routes);
+app.use("/create", jobRouter);
+
+
 
 /* === Express 404 error handler === */
 app.use(function(req, res, next) {
@@ -55,8 +59,11 @@ passport.serializeUser(Account.serializeUser());
 passport.deserializeUser(Account.deserializeUser());
 
 /* === Mongoose Connection === */
-mongoose.connect(process.env.MONGODB_URI||'mongodb://localhost/mern_authenticate_me');
+mongoose.connect(process.env.ATLAS_URI, {useNewUrlParser: true, useCreateIndex: true});
 
+const connection = mongoose.connection;
+
+connection.once("open",() => {console.log("MongoDB database connection established successfully")})
 /* === Error Handling === */
 
 /* Development error handler will print stacktrace */
