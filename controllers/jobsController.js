@@ -1,4 +1,4 @@
-const db = require("../models/job");
+const db = require("../models");
 
 module.exports ={
     findAll: function(req, res)
@@ -10,7 +10,7 @@ module.exports ={
     },
     create: function(req, res)
     {
-        console.log("Data in JobsController: " + req.body)
+        console.log("Data in JobsController: " + JSON.stringify(req.body))
         db.Job
         .create(req.body)
         .then(dbModel => res.json(dbModel))
