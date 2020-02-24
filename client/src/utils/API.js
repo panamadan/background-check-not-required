@@ -8,7 +8,7 @@ const location = "location=Orlando&";
 
 export default {
   search: function(keyword, distance = 50) {
-    keyword = "keywords=" + keyword;
+    keyword = "keyword=" + keyword;
     distance = "distance=" + distance + "&";
     
     const searchUrl = url + apikey + embedded_search_key + location + distance + keyword;
@@ -17,3 +17,12 @@ export default {
     .then(results => results.data.jobs);
   }
 };
+// function stripHtml(html){
+//     // Create a new div element
+//     var temporalDivElement = document.createElement("div");
+//     // Set the HTML content with the providen
+//     temporalDivElement.innerHTML = html;
+//     // Retrieve the text property of the element (cross-browser support)
+//     return temporalDivElement.textContent || temporalDivElement.innerText || "";
+//   }
+//   stripHtml();
