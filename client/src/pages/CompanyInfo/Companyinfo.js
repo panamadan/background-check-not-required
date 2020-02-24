@@ -23,7 +23,7 @@ function CompanyInfo()
     e.preventDefault();
 
     const data = {jobTitle: jobTitle, company: company, salary: salary, summary: summary, crimeType: crimeType}
-    console.log("Data in handleSubmit: " + data);
+    console.log("Data in handleSubmit: " + JSON.stringify(data));
     API.createJob(data)
     .then(res => console.log(res))
     .catch(error => console.error("Error: ", error))
