@@ -1,36 +1,52 @@
-import React from 'react'
+import React, {useState} from "react";
+import Container from "muicss/lib/react/container"
+import Form from "muicss/lib/react/form"
+import Button from "muicss/lib/react/button"
+import Input from "muicss/lib/react/input"
 
-class LoginForm extends React.Component {
-	// refs
-	form: null;
-	usernameElem: null;
-	passwordElem: null;
+function LoginForm({ onLogin }) {
+  // refs
+  // form: null;
+  // usernameElem: null;
+  // passwordElem: null;
 
-	render() {
-		const { onLogin } = this.props;
-		return (
-			
-				<form
-					ref={(elem) => this.form = elem}
-					onSubmit={(e) => {
-						e.preventDefault();
-						return onLogin({
-							username: this.usernameElem.value,
-							password: this.passwordElem.value
-						});
-					}}
-				>
-					<div className="form-group">
-						<input className="form-control" ref={(input) => this.usernameElem = input} type='text' name="username" placeholder='Enter Username' /><br/>
-						<input className="form-control" ref={(input) => this.passwordElem = input} type='password' name="password" placeholder='Password' /><br/>
-						<button className="btn btn-success" type='submit'>
-							Submit
-						</button>
-					</div>
-				</form>
-			
-		)
-	}
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    console.log("submit clicked", data);
+    const data = { username: username, password: password };
+    return onLogin(data);
+  };
+
+  return (
+	  <Container>
+    <Form onSubmit={handleSubmit}>
+      <div className="form-group">
+        <Input
+          className="form-control"
+          type="text"
+		  value={username}
+		  onChange={e => setUsername(e.target.value)}
+          placeholder="Enter Username"
+        />
+        <br />
+        <Input
+          className="form-control"
+			value={password}
+			onChange={e => setPassword(e.target.value)}
+		  type="password"
+          placeholder="Password"
+        />
+        <br />
+        <Button className="btn btn-success" type="submit">
+          Submit
+        </Button>
+      </div>
+    </Form>
+	</Container>
+  );
 }
 
-export default LoginForm
+export default LoginForm;
