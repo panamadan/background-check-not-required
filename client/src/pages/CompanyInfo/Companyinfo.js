@@ -18,6 +18,7 @@ function CompanyInfo()
   const [crimeType, setCrimeType] = useState([]);
 
 
+  
   const handleSubmit = (e) =>
   {
     e.preventDefault();
