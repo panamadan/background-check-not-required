@@ -27,14 +27,7 @@ function CompanyInfo()
     API.createJob(data)
     .then(res => console.log(res))
     .catch(error => console.error("Error: ", error))
-    .then(res => console.log("Success", res))
-
-
-    console.log(jobTitle)
-    console.log(company)
-    console.log(salary)
-    console.log(summary)
-    console.log(crimeType)
+    .then(res => console.log("Success", res));
   }
 
 

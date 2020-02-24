@@ -39,10 +39,10 @@ if (process.env.NODE_ENV === "production") {
 };
 
 /* === Routing === */
+app.use(routes)
 const jobRouter = require("./routes/api/jobs")
 
 app.use("/create", jobRouter);
-
 
 
 /* === Express 404 error handler === */

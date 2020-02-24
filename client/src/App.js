@@ -31,7 +31,7 @@ const AuthExample = () => (
       		{/* <Nav className="App-header"/> */}
 			  <NavBar/>
 			<Container>
-				{/* <AuthButton/> */}
+				<AuthButton/>
 				{/* <ul style={listStyle}>
 					<li><Link to="/public">Public Page</Link></li>
 					<li><Link to="/protected">Protected Page</Link></li>
@@ -82,12 +82,4 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
 	)}/>
 )
 
-
-
-
-
-
-
-
 export default AuthExample
-

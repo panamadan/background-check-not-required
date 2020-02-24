@@ -1,5 +1,5 @@
 import React from 'react';
-import RegisterForm from "../RegisterForm";
+import RegisterForm from "../RegisterForm/index";
 
 //The component for doing the actual signup of the User
 class Register extends React.Component {
@@ -8,6 +8,7 @@ class Register extends React.Component {
 	}
 
 	register = (data) => {
+		console.log("registering user...");
 		fetch('api/users/register', {
 			method: 'POST',
 			body: JSON.stringify(data),
