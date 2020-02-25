@@ -15,8 +15,19 @@ export default {
 
     return axios.get(searchUrl, { headers: { 'X-Requested-With': 'local' }})
     .then(results => results.data.jobs);
+  },
+  getAlljobs : function(keyword){
+return axios.get("/api",{
+  params:{
+    jobTitle: keyword
   }
-};
+})
+.then(results => {
+  console.log(results);
+})
+  }
+}
+
 // function stripHtml(html){
 //     // Create a new div element
 //     var temporalDivElement = document.createElement("div");

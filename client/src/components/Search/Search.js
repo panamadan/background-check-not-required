@@ -14,7 +14,6 @@ function Search(props) {
 
   const handleChange = e => {
     setTerm(e.target.value);
-   
   };
 
   return (

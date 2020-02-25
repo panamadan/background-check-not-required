@@ -18,7 +18,21 @@ function Home() {
     API.search(keyword)
       .then(results => {
           console.log(results);
-        setListData(results);
+       return (results)
+    //    setListData(results);
+      })
+      .then(apiResults => {
+        return API.getAlljobs(keyword)
+        .then(dbResults => {
+            if (dbResults){
+                return [...apiResults,...dbResults]
+            }
+            else {return apiResults}
+        })
+
+      })
+      .then (finalResults => {
+        setListData(finalResults);
       })
       .catch(err => console.log(err));
   };
