@@ -1,7 +1,6 @@
 import React from "react";
-import Col from "muicss/lib/react/col"
-import Container from "muicss/lib/react/container";
-import { Button } from "muicss/react";
+import Container from "@material-ui/core/Container"
+import Button from "@material-ui/core/Button"
 
 function Dashboard ()
 {
@@ -9,12 +8,7 @@ function Dashboard ()
         <div>
             <h1>Dashboard</h1>
             <Container>
-                <Col md="6">
-
-                </Col>
-                <Col md="6">
-                    <Button><a href="/create">Create Job</a></Button>
-                </Col>
+                <Button><a href="/create">Create Job</a></Button>
             </Container>
             
         </div>

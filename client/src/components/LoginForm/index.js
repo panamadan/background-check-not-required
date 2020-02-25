@@ -10,18 +10,23 @@ import LockOutlinedIcon from "@material-ui/icons/LockOutlined"
 import Typography from "@material-ui/core/Typography"
 import { makeStyles } from "@material-ui/core/styles";
 
-function LoginForm({ onLogin }) {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+function LoginForm({ onLogin }) 
+{
+	// Set states for username and password
+  	const [username, setUsername] = useState("");
+  	const [password, setPassword] = useState("");
 
-  const handleSubmit = e => {
-    e.preventDefault();
-    console.log("submit clicked", data);
-    const data = { username: username, password: password };
-    return onLogin(data);
-  };
+	// Handle form submit
+	const handleSubmit = e => 
+	{
+    	e.preventDefault();
+    	console.log("submit clicked", data);
+    	const data = { username: username, password: password };
+    	return onLogin(data);
+  	};
 
-  const useStyles = makeStyles(theme => ({
+	// Styling for Material UI Components
+  	const useStyles = makeStyles(theme => ({
     paper: {
       marginTop: theme.spacing(8),
       display: "flex",
@@ -39,65 +44,66 @@ function LoginForm({ onLogin }) {
     submit: {
       margin: theme.spacing(3, 0, 2)
     }
-  }));
-
-  const classes = useStyles();
-  return (
-    <Container component="main" maxWidth="xs">
-      <CssBaseline />
-      <div className={classes.paper}>
-        <Avatar className={classes.avatar}>
-          <LockOutlinedIcon />
-        </Avatar>
-        <Typography component="h1" variant="h5">
-          Sign in
-        </Typography>
-        <form className={classes.form} onSubmit={handleSubmit} noValidate>
-          <TextField
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
-            id="email"
-            label="Email Address"
-            name="email"
-			autoComplete="email"
-			value={username}
-			onChange={e => setUsername(e.target.value)}
-            autoFocus
-          />
-          <TextField
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
-            name="password"
-            label="Password"
-            type="password"
-            id="password"
-			autoComplete="current-password"
-			value={password}
-			onChange={e => setPassword(e.target.value)}
-          />
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            color="primary"
-            className={classes.submit}
-          >
-            Sign In
-          </Button>
-          <Grid container>
-            <Grid item>
-              <Link href="register" variant="body2">
-                {"Don't have an account? Sign Up"}
-              </Link>
-            </Grid>
-          </Grid>
-        </form>
-      </div>
-    </Container>
+  	}));
+	
+	// Use styling in JSX
+  	const classes = useStyles();
+  	return (
+    	<Container component="main" maxWidth="xs">
+      		<CssBaseline />
+      		<div className={classes.paper}>
+        		<Avatar className={classes.avatar}>
+          			<LockOutlinedIcon />
+        		</Avatar>
+        		<Typography component="h1" variant="h5">
+          			Sign in
+        		</Typography>
+        	<form className={classes.form} onSubmit={handleSubmit} noValidate>
+          		<TextField
+            		variant="outlined"
+            		margin="normal"
+            		required
+            		fullWidth
+            		id="email"
+            		label="Email Address"
+            		name="email"
+					autoComplete="email"
+					value={username}
+					onChange={e => setUsername(e.target.value)}
+            		autoFocus
+          		/>
+          		<TextField
+            		variant="outlined"
+            		margin="normal"
+            		required
+            		fullWidth
+            		name="password"
+            		label="Password"
+            		type="password"
+            		id="password"
+					autoComplete="current-password"
+					value={password}
+					onChange={e => setPassword(e.target.value)}
+          		/>
+          		<Button
+            		type="submit"
+            		fullWidth
+            		variant="contained"
+            		color="primary"
+            		className={classes.submit}
+          		>
+            		Sign In
+          		</Button>
+          		<Grid container>
+            		<Grid item>
+              			<Link href="register" variant="body2">
+                			{"Don't have an account? Sign Up"}
+              			</Link>
+            		</Grid>
+          		</Grid>
+        	</form>
+      		</div>
+    	</Container>
   );
 }
 
