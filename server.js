@@ -14,9 +14,11 @@ require('dotenv').config({ path: "./.env" });
 const PORT = process.env.PORT || 3001;
 /* === Call Express as app === */
 const app = express();
+const cors = require ("cors");
 
 
 /* === Middleware === */
+app.use(cors());
 app.use(logger('dev'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());

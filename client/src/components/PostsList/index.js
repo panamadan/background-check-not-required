@@ -27,13 +27,14 @@ const PostsList = (props) => {
 
                 <Panel>
                   {job.job_title ? (
-                    <ListItem key={i}>
-                      <p> {job.job_title}</p>
+
+                    <Card job={job} key={i}>
+                      {/* <p> {job.job_title}</p> */}
                       <p> {job.job_location}</p>
                       <p> {job.job_company}</p>
                       <p> {job.job_tag}</p>
                       <p> {job.job_description}</p>
-                    </ListItem>
+                    </Card>
                   ) : (
                     <h3>Noresults to Display</h3>
                   )}
