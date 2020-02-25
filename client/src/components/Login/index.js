@@ -3,13 +3,7 @@ import { Redirect } from "react-router-dom";
 import LoginForm from "../LoginForm";
 import Auth from "../../utils/Auth";
 import "../../pages/SignIn/Signin.css";
-import Navbar from "../NavBar/Navbar";
-// import ReactDOM from 'react-dom';
-import Form from "muicss/lib/react/form";
-import Input from "muicss/lib/react/input";
-// import Textarea from 'muicss/lib/react/textarea';
-import Button from "muicss/lib/react/button";
-import { Container } from "muicss/react";
+
 //Uses the Auth methods to actually login with the LoginForm Component.
 class Login extends React.Component {
   //Initial boolean to check for authenticated user
@@ -55,9 +49,9 @@ class Login extends React.Component {
 
     return (
       <div>
-       <h4>Sign in!</h4>
-	   <LoginForm onLogin={this.login} />
-      </div>
+        <h4>Sign in!</h4>
+	        <LoginForm onLogin={this.login} />
+        </div>
     );
   }
 }

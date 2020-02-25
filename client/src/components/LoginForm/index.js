@@ -47,7 +47,9 @@ function LoginForm({ onLogin })
   	}));
 	
 	// Use styling in JSX
-  	const classes = useStyles();
+	const classes = useStyles();
+	  
+	// Render
   	return (
     	<Container component="main" maxWidth="xs">
       		<CssBaseline />
