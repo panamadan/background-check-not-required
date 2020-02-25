@@ -104,31 +104,6 @@ function LoginForm({ onLogin }) {
         </form>
       </div>
     </Container>
-    //   <Container>
-    // 	<FormControl onSubmit={handleSubmit}>
-    //   	<div className="form-group">
-    //     <Input
-    //       className="form-control"
-    //       type="text"
-    // 	  value={username}
-    // 	  onChange={e => setUsername(e.target.value)}
-    //       placeholder="Enter E-mail"
-    //     />
-    //     <br />
-    //     <Input
-    //       className="form-control"
-    // 		value={password}
-    // 		onChange={e => setPassword(e.target.value)}
-    // 	  type="password"
-    //       placeholder="Password"
-    //     />
-    //     <br />
-    //     <Button variant="outlined" color="primary" type="submit">
-    //       Submit
-    //     </Button>
-    //   </div>
-    // </FormControl>
-    // </Container>
   );
 }
 
