@@ -107,31 +107,6 @@ function RegisterForm({onRegister}) {
         </form>
       </div>
     </Container>
-    {/* <Container>
-      <Form onSubmit={handleSubmit}>
-        <legend>Sign Up</legend>
-        <Input
-          label="Email Address"
-          type="email"
-		  value={username}
-		  onChange={e => setUsername(e.target.value)}
-          floatingLabel={true}
-          required={true}
-        />
-        <Input
-          label="Password"
-          type="password"
-		  value={password}
-		  onChange={e => setPassword(e.target.value)}
-          floatingLabel={true}
-          required={true}
-        />
-
-        <Button variant="raised" typeof="submit">
-          Sign up
-        </Button>
-      </Form>
-    </Container> */}
 	</div>
   );
 }
