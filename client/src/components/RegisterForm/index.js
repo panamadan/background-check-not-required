@@ -12,9 +12,11 @@ import Container from '@material-ui/core/Container';
 
 function RegisterForm({onRegister}) {
 
+  // Set states for username and password
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
+  // Handle submit for registration
   const handleSubmit = e => 
   {
 	e.preventDefault();
@@ -25,6 +27,7 @@ function RegisterForm({onRegister}) {
 
   console.log(`Register form states are: ${JSON.stringify(username, password)}`);
 
+  // Styling for Material UI Components
   const useStyles = makeStyles(theme => ({
     paper: {
       marginTop: theme.spacing(8),
@@ -45,8 +48,10 @@ function RegisterForm({onRegister}) {
     },
   }));
 
+  // Use styling in JSX
   const classes = useStyles();
 
+  // Render
   return (
 	<div>
     <Container component="main" maxWidth="xs">

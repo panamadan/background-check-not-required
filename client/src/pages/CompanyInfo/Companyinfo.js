@@ -12,12 +12,14 @@ import API from "../../utils/Jobs"
 
 function CompanyInfo() 
 {
+  // Set states to get Job Posting data from the form
   const [jobTitle, setJobTitle] = useState("");
   const [company, setCompany] = useState("");
   const [salary, setSalary] = useState("");
   const [summary, setSummary] = useState("");
   const [crimeType, setCrimeType] = useState([]);
 
+  // Handle form submission
   const handleSubmit = (e) =>
   {
     e.preventDefault();
@@ -30,6 +32,7 @@ function CompanyInfo()
     .then(res => console.log("Success", res));
   }
 
+  // Styling for Material UI Components
   const useStyles = makeStyles(theme => ({
     paper: {
       marginTop: theme.spacing(8),
@@ -55,8 +58,10 @@ function CompanyInfo()
     }
   }));
 
+  // Use styling in JSX
   const classes = useStyles();
 
+  // Render
   return (
     <div>
       <Container component="main" maxWidth="xs">
