@@ -14,6 +14,15 @@ import { List, ListItem } from "../List";
 import Card from "../Card";
 
 const PostsList = (props) => {
+    function stripHtml(html){
+        // Create a new div element
+        var temporalDivElement = document.createElement("div");
+        // Set the HTML content with the providen
+        temporalDivElement.innerHTML = html;
+        // Retrieve the text property of the element (cross-browser support)
+        return temporalDivElement.textContent || temporalDivElement.innerText || "";
+      }
+      
   return (
     <Container>
       <Row>
@@ -33,7 +42,7 @@ const PostsList = (props) => {
                       {/* <p> {job.job_location}</p> */}
                       <p> {job.job_company}</p>
                       <p> {job.job_tag}</p>
-                      <p> {job.job_description}</p>
+                      <p> {stripHtml(job.job_description)}</p>
                     </Card>
                   ) : (
                     <h3>Noresults to Display</h3>

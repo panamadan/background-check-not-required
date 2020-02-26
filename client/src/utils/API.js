@@ -6,6 +6,8 @@ const embedded_search_key =
   "embedded_search_key=aca8a0a79667e220697937418b88b387&";
 const location = "location=Orlando&";
 
+
+
 export default {
   search: function(keyword, distance = 50) {
     keyword = "keyword=" + keyword;
@@ -16,24 +18,20 @@ export default {
     return axios.get(searchUrl, { headers: { 'X-Requested-With': 'local' }})
     .then(results => results.data.jobs);
   },
+ 
+  
+
   getAlljobs : function(keyword){
-return axios.get("/api",{
+return axios.get("/create",{
   params:{
     jobTitle: keyword
   }
 })
 .then(results => {
+  
   console.log(results);
 })
   }
+  
 }
 
-// function stripHtml(html){
-//     // Create a new div element
-//     var temporalDivElement = document.createElement("div");
-//     // Set the HTML content with the providen
-//     temporalDivElement.innerHTML = html;
-//     // Retrieve the text property of the element (cross-browser support)
-//     return temporalDivElement.textContent || temporalDivElement.innerText || "";
-//   }
-//   stripHtml();

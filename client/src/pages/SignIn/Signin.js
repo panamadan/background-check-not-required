@@ -15,7 +15,7 @@ function Signin ()
             <Navbar />
             <Container>
             <Form>
-        <legend>Sign In</legend>
+        <legend></legend>
         {/* <Input label="Name " required={true} /> */}
         <Input label="Email Address" type="email" floatingLabel={true} required={true} />
         <Input label="Password" type="password" floatingLabel={true} required={true} />
