@@ -41,7 +41,7 @@ const AuthExample = () => (
 const AuthButton = withRouter(({ history }) => (
 	Auth.isAuthenticated ? (
 		<div className="container">
-			<p>Success! You are Logged In!</p>
+			<p></p>
 			<button className="btn btn-danger" 
 				onClick={() => {
 					Auth.signout(() => history.push('/'))
@@ -50,7 +50,7 @@ const AuthButton = withRouter(({ history }) => (
 			</button>
 		</div>
 	) : (
-		<p>You are not logged in.</p>
+		<p></p>
 	)
 ))
 
